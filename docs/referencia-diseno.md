@@ -169,3 +169,22 @@ No disponible y **con impacto menor**: `recover_javascript_sources` (Wakaru, sol
 - Velocidad exacta y pausa al hover del marquee; efectos `PAGE_SCROLL`/`MOUSE_MOVE` concretos de la home.
 - Menú móvil abierto y páginas internas en móvil.
 - Contenido de los paquetes/precios (solo se mapeó la estructura).
+
+## Diseño por sección (revisión 3)
+
+Medido con capturas a 1440×900 y 375×812 y estilos computados de cada sección; aplicado en `index.html` y `css/styles.css`.
+
+| Sección | Escritorio | Celular |
+|---|---|---|
+| Barra de anuncio | píldora acento con 4px de margen, radio 16px, Urbanist 12px mayúsculas | igual, texto 2.3svw |
+| Nav | grid `1fr auto 1fr`, padding 16px, línea inferior; CTA con contorno claro y blur 16px | hamburguesa; la píldora muestra solo logo + menú |
+| Hero | sticky; titular 80px a la izquierda; bloque derecho con H1 16px y dos botones (12px 30px) en una fila | titular 48px; botones en una fila (14px) |
+| Galería | track 200vh, fotos 22vw radio 24px sin sombra, título 6em | fotos 36vw |
+| Servicios | etiqueta en píldora con ícono, frase 40px/1.1 centrada (máx. 667px), 3 íconos con texto Urbanist, padding inferior 160px | frase 5.7vw |
+| Logos | línea divisoria, dos filas a 100px, logos al 50% de opacidad, separación 96px, degradados de 140px en los bordes | separación 56px, degradados 40px |
+| Soluciones | contenedor 1440px (padding 48px), tabs repartidos a todo el ancho con línea y brillo de acento, dos columnas de 640px: foto radio 32px con chip, panel con regla de acento, lista con íconos en círculo y botón acento con flecha | tabs como píldoras, una columna |
+| Tu casa, conectada | título y texto centrados (40px / Urbanist 16px), cuadrícula de 5 × 167px, íconos 32px, etiquetas Urbanist 20px | 3 columnas llenadas por columna |
+| Control4 | video a pantalla completa; etiqueta en píldora, título 40px, botón acento con flecha en círculo blanco; abajo valores (ícono + texto) y tarjeta "Ver video" de 236px | valores 2×2 con la tarjeta de video a la derecha |
+| Respaldo | tarjeta máx. 74rem, padding 50px, radio 25px, borde blanco y sombra suave; texto a la izquierda, imagen 28rem × 30rem a la derecha | una columna |
+| CTA | video con esquinas superiores de 50px, padding 180px, título 4rem centrado, botón con contorno en mayúsculas | radio 25px, título 2.5rem |
+| Footer | fondo oscuro con líneas topográficas abajo a la derecha; columnas 1fr / 2fr; boletín con campo oscuro y flecha; enlaces 16px con hover al 50%; sellos de dealer | columna izquierda centrada, enlaces en 2 columnas |

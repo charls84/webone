@@ -221,7 +221,7 @@
 
   // IX2 SCROLL_INTO_VIEW: fade 1 s (titulares: ease, +.25 s; features: outQuart, +.1 s)
   document.querySelectorAll('[data-fade-only]').forEach(function (el) {
-    var feature = el.matches('.about-feature, .trust-item, .value');
+    var feature = el.matches('.about-feature, .trust-list li');
     gsap.to(el, {
       opacity: 1, duration: 1,
       ease: feature ? 'power3.out' : 'power1.inOut',

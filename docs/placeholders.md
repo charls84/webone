@@ -19,8 +19,10 @@ Cada caja rayada en la página muestra su ID. Fotos y videos de Control4 deben s
 | C4-13 | Tab Clima | Foto o video | Termostato / habitación principal | 4:3 |
 | C4-14 | Tab Cámaras y cerraduras | Foto o video | Puerta principal: cerradura y timbre con video | 4:3 |
 | C4-15 | Tab Redes y Wi-Fi | Foto o video | Rack de red / punto de acceso | 4:3 |
-| C4-30 | Bloque Control4 | Video | Video oficial de la experiencia Control4 (abre al hacer clic) | 16:10 póster + embed o archivo autorizado |
-| C4-40 | CTA final | Video | Interior/fachada (se muestra en blanco y negro) | MP4 loop, sin audio |
+| C4-20 | Sección Control4 (fondo a pantalla completa) | Video | Showroom o producto Control4 en loop | MP4/WebM loop, sin audio, 1920×1080 |
+| C4-30 | Sección Control4 (tarjeta "Ver video") | Miniatura + video | Miniatura del video oficial; el video abre al hacer clic | 236×126 miniatura + embed o archivo autorizado |
+| C4-31 | Respaldo (tarjeta) | Foto | Técnico de One instalando, o documento de póliza | 448×480 (≈ 14:15) |
+| C4-40 | CTA final | Video | Interior/fachada | MP4 loop, sin audio |
 
 Si un tab usa video, ponlo dentro de `.pane-media` como `<video muted playsinline loop>`: el JS ya pausa los videos de los tabs inactivos y reinicia el del tab activo.
 
@@ -28,9 +30,9 @@ Si un tab usa video, ponlo dentro de `.pane-media` como `<video muted playsinlin
 
 | ID | Qué va |
 |---|---|
-| LOGO-C4 | Logo de Control4 para dealers, según su guía de marca (aparece en las dos filas del carrusel) |
-| [Marca 2] a [Marca 15] | Otras marcas que One integre (confirmar cuáles y su permiso de uso) |
-| BADGE-C4 | Sello "Control4 Authorized Dealer" (o el nombre oficial que use Control4) |
+| LOGO-C4 | Logo de Control4 para dealers, según su guía de marca (aparece en las dos filas del carrusel). Formato: PNG/SVG en gris, alto 28px |
+| [MARCA 2] a [MARCA 13] | Otras marcas que One integre (confirmar cuáles y su permiso de uso). Mismo formato |
+| BADGE-C4 | Sello "Control4 Authorized Dealer" (o el nombre oficial que use Control4), en el footer junto al boletín. Círculo de ~96px |
 
 ## Datos de One por confirmar
 
