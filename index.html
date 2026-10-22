@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instalación y automatización de hogares inteligentes | One Automatización</title>
+  <meta name="description" content="Diseño, instalación y soporte integral de hogares inteligentes. Integrador autorizado Control4 para iluminación, cortinas, entretenimiento, clima, seguridad y redes en [PLACEHOLDER: ciudad/zona].">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/font/lucide.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- PLACEHOLDER: completar datos reales de One antes de publicar -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "One Automatización",
+    "url": "/",
+    "description": "Diseño, instalación y soporte integral de hogares inteligentes. Integrador autorizado Control4 para iluminación, cortinas, entretenimiento, clima, seguridad y redes.",
+    "telephone": "[PLACEHOLDER: teléfono]",
+    "address": { "@type": "PostalAddress", "addressLocality": "[PLACEHOLDER: ciudad]", "addressCountry": "[PLACEHOLDER: país]" },
+    "areaServed": [{ "@type": "City", "name": "[PLACEHOLDER: zona 1]" }, { "@type": "City", "name": "[PLACEHOLDER: zona 2]" }],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de hogar inteligente",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control de hogar inteligente", "description": "Diseño e instalación integral de hogares inteligentes Control4" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Iluminación", "description": "Instalación y automatización de iluminación inteligente" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cortinas", "description": "Cortinas y persianas motorizadas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretenimiento", "description": "Cine en casa y audio multizona" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clima", "description": "Control inteligente de clima" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cámaras y cerraduras", "description": "Instalación de cámaras de seguridad y cerraduras inteligentes" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Redes y Wi-Fi", "description": "Redes y Wi-Fi para el hogar" } }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Preloader: barrido del logo + cortina que sube -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <svg class="preloader-lines" viewBox="0 0 400 300" preserveAspectRatio="xMinYMax meet" aria-hidden="true">
+        <path d="M-10 300 C 60 230, 120 250, 170 190 S 250 120, 300 140"/>
+        <path d="M-10 270 C 50 205, 105 225, 150 170 S 225 100, 270 115"/>
+        <path d="M-10 240 C 40 180, 90 200, 130 150 S 200 80, 240 92"/>
+        <path d="M-10 210 C 30 160, 75 175, 110 130 S 175 62, 210 70"/>
+      </svg>
+      <div class="preloader-logo-wrap">
+        <div class="preloader-logo">ONE<span>automatización</span></div>
+        <div class="preloader-logo-overlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav estática (se va hacia arriba al hacer scroll) -->
+  <header class="nav nav--static">
+    <div class="announce">
+      <p>[PLACEHOLDER: anuncio corto]</p>
+      <a href="#contacto">Agenda una asesoría gratuita</a>
+    </div>
+    <div class="nav-inner container">
+      <a href="#" class="logo" aria-label="One Automatización, inicio">ONE<span>automatización</span></a>
+      <!-- Dropdowns (Soluciones / Empresa / Aprende). JS los clona en la nav pill. -->
+      <nav class="nav-links" aria-label="Principal">
+        <div class="dd">
+          <button class="dd-toggle" aria-expanded="false">Soluciones <i class="icon-chevron-down dd-arrow" aria-hidden="true"></i></button>
+          <div class="dd-list" hidden>
+            <div class="dd-card dd-card--wide">
+              <div class="dd-grid">
+                <a href="#soluciones" class="dd-link"><span class="dd-icon"><i class="icon-lightbulb"></i></span><span class="dd-text">Iluminación</span><i class="icon-arrow-right dd-go"></i></a>
+                <a href="#soluciones" class="dd-link"><span class="dd-icon"><i class="icon-tv"></i></span><span class="dd-text">Entretenimiento</span><i class="icon-arrow-right dd-go"></i></a>
+                <a href="#soluciones" class="dd-link"><span class="dd-icon"><i class="icon-blinds"></i></span><span class="dd-text">Cortinas</span><i class="icon-arrow-right dd-go"></i></a>
+                <a href="#soluciones" class="dd-link"><span class="dd-icon"><i class="icon-cctv"></i></span><span class="dd-text">Cámaras y cerraduras</span><i class="icon-arrow-right dd-go"></i></a>
+                <a href="#soluciones" class="dd-link"><span class="dd-icon"><i class="icon-thermometer"></i></span><span class="dd-text">Clima</span><i class="icon-arrow-right dd-go"></i></a>
+                <a href="#soluciones" class="dd-link"><span class="dd-icon"><i class="icon-wifi"></i></span><span class="dd-text">Redes y Wi-Fi</span><i class="icon-arrow-right dd-go"></i></a>
+              </div>
+              <a href="#control4" class="dd-feature">
+                <span class="dd-tile"><i class="icon-house"></i></span>
+                <span class="dd-feature-text"><strong>Automatización del hogar</strong><span>Mira lo que puede hacer una casa realmente inteligente</span></span>
+                <span class="dd-feature-arrow"><i class="icon-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="dd">
+          <button class="dd-toggle" aria-expanded="false">Empresa <i class="icon-chevron-down dd-arrow" aria-hidden="true"></i></button>
+          <div class="dd-list" hidden>
+            <div class="dd-card">
+              <a href="#nosotros" class="dd-link"><span class="dd-icon"><i class="icon-badge-dollar-sign"></i></span><span class="dd-text">Precios y proceso</span><i class="icon-arrow-right dd-go"></i></a>
+              <a href="#nosotros" class="dd-link"><span class="dd-icon"><i class="icon-book-open"></i></span><span class="dd-text">Nuestra historia</span><i class="icon-arrow-right dd-go"></i></a>
+              <a href="#nosotros" class="dd-link"><span class="dd-icon"><i class="icon-handshake"></i></span><span class="dd-text">Aliados comerciales</span><i class="icon-arrow-right dd-go"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="dd">
+          <button class="dd-toggle" aria-expanded="false">Aprende <i class="icon-chevron-down dd-arrow" aria-hidden="true"></i></button>
+          <div class="dd-list" hidden>
+            <div class="dd-card">
+              <a href="#" class="dd-link"><span class="dd-icon"><i class="icon-newspaper"></i></span><span class="dd-text">Artículos</span><i class="icon-arrow-right dd-go"></i></a>
+              <a href="#" class="dd-link"><span class="dd-icon"><i class="icon-folder-open"></i></span><span class="dd-text">Recursos</span><i class="icon-arrow-right dd-go"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <a href="#contacto" class="btn btn--glass nav-cta">Contáctanos</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Nav pill (baja cuando la estática se va). Los links se clonan desde la estática. -->
+  <header class="nav nav--pill" aria-hidden="true">
+    <div class="nav-inner">
+      <a href="#" class="logo" tabindex="-1">ONE<span>automatización</span></a>
+      <a href="#contacto" class="btn btn--dark nav-cta" tabindex="-1">Contáctanos</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" tabindex="-1"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <p class="mobile-group">Soluciones</p>
+    <a href="#soluciones">Iluminación</a><a href="#soluciones">Cortinas</a><a href="#soluciones">Entretenimiento</a><a href="#soluciones">Clima</a><a href="#soluciones">Cámaras y cerraduras</a><a href="#soluciones">Redes y Wi-Fi</a>
+    <p class="mobile-group">Empresa</p>
+    <a href="#nosotros">Precios y proceso</a><a href="#nosotros">Nuestra historia</a><a href="#nosotros">Aliados comerciales</a>
+    <p class="mobile-group">Aprende</p>
+    <a href="#">Artículos</a><a href="#">Recursos</a>
+    <a href="#contacto" class="btn btn--accent">Contáctanos</a>
+  </div>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <!-- Hero sticky (z-index 1); las secciones siguientes suben por encima como una cortina -->
+    <section class="hero">
+      <div class="hero-media ph ph--dark" data-ph="C4-01" data-ph-label="VIDEO CONTROL4 · Hero: interior residencial, luces que se encienden por escenas (loop de unos 8 s, sin audio, con póster)"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <h2 class="hero-title" data-split="load"><em>Vivir</em> mejor,<br>hecho simple.</h2>
+        <div class="hero-right">
+          <h1 class="hero-sub">Diseño e instalación integral de hogares inteligentes</h1>
+          <div class="hero-ctas">
+            <a href="#soluciones" class="btn btn--light">Nuestros servicios</a>
+            <a href="#control4" class="btn btn--glass">Control de hogar inteligente</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Galería que converge con el scroll (track 200vh + sticky) -->
+    <section class="converge" aria-label="Diseño con intención">
+      <div class="converge-track">
+        <div class="converge-sticky">
+          <h2 class="converge-title">Diseño con<br><strong>intención</strong></h2>
+          <div class="frame frame-06 ph" data-ph="C4-07" data-ph-label="FOTO CONTROL4 · Pantalla táctil en pared mostrando cámara"></div>
+          <div class="frame frame-05 ph" data-ph="C4-06" data-ph-label="FOTO CONTROL4 · Barra de sonido sobre mueble de madera"></div>
+          <div class="frame frame-04 ph" data-ph="C4-05" data-ph-label="FOTO CONTROL4 · Cortinas motorizadas y keypad"></div>
+          <div class="frame frame-03 ph" data-ph="C4-04" data-ph-label="FOTO CONTROL4 · TV en pared con parlantes laterales"></div>
+          <div class="frame frame-02 ph" data-ph="C4-03" data-ph-label="FOTO CONTROL4 · Control remoto con botones iluminados"></div>
+          <div class="frame frame-01 ph" data-ph="C4-02" data-ph-label="FOTO CONTROL4 · Familia en la sala, TV de fondo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Servicios / nosotros -->
+    <section class="about" id="nosotros">
+      <div class="section-divider" data-divider></div>
+      <div class="container about-inner">
+        <p class="eyebrow eyebrow--center">Servicios de hogar inteligente</p>
+        <h2 class="about-statement" data-split="scroll-fast">Planeación, instalación y soporte de tu hogar inteligente, de principio a fin. <span class="muted">Pensado para hacerte la vida más simple, no solo para impresionar.</span></h2>
+        <div class="about-features">
+          <div class="about-feature" data-fade-only><i class="icon-lightbulb" aria-hidden="true"></i><h3>Tecnología que simplifica</h3></div>
+          <div class="about-feature" data-fade-only><i class="icon-grid-3x3" aria-hidden="true"></i><h3>Diseño con intención</h3></div>
+          <div class="about-feature" data-fade-only><i class="icon-shield-check" aria-hidden="true"></i><h3>Respaldo Control4</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Carrusel de logos (dos filas en sentidos opuestos, 25 s) -->
+    <section class="logos" aria-label="Marcas que integramos">
+      <div class="section-divider" data-divider></div>
+      <div class="logos-wrap">
+        <div class="marquee" data-marquee>
+          <div class="marquee-set">
+            <span class="logo-ph" data-ph="LOGO-C4">Control4</span><span class="logo-ph">[Marca 2]</span><span class="logo-ph">[Marca 3]</span><span class="logo-ph">[Marca 4]</span><span class="logo-ph">[Marca 5]</span><span class="logo-ph">[Marca 6]</span><span class="logo-ph">[Marca 7]</span><span class="logo-ph">[Marca 8]</span>
+          </div>
+        </div>
+        <div class="marquee" data-marquee="reverse">
+          <div class="marquee-set">
+            <span class="logo-ph">[Marca 9]</span><span class="logo-ph">[Marca 10]</span><span class="logo-ph" data-ph="LOGO-C4">Control4</span><span class="logo-ph">[Marca 11]</span><span class="logo-ph">[Marca 12]</span><span class="logo-ph">[Marca 13]</span><span class="logo-ph">[Marca 14]</span><span class="logo-ph">[Marca 15]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Soluciones por tabs -->
+    <section class="solutions" id="soluciones">
+      <div class="container">
+        <p class="eyebrow">Soluciones de hogar inteligente</p>
+        <h2 class="section-title" data-split="scroll">Cada sistema de tu casa, diseñado e instalado por un solo equipo</h2>
+
+        <div class="tabs" role="tablist" aria-label="Soluciones">
+          <button role="tab" id="tab-1" aria-controls="pane-1" aria-selected="true" class="tab">Iluminación</button>
+          <button role="tab" id="tab-2" aria-controls="pane-2" aria-selected="false" class="tab" tabindex="-1">Cortinas</button>
+          <button role="tab" id="tab-3" aria-controls="pane-3" aria-selected="false" class="tab" tabindex="-1">Entretenimiento</button>
+          <button role="tab" id="tab-4" aria-controls="pane-4" aria-selected="false" class="tab" tabindex="-1">Clima</button>
+          <button role="tab" id="tab-5" aria-controls="pane-5" aria-selected="false" class="tab" tabindex="-1">Cámaras y cerraduras</button>
+          <button role="tab" id="tab-6" aria-controls="pane-6" aria-selected="false" class="tab" tabindex="-1">Redes y Wi-Fi</button>
+          <span class="tab-indicator" aria-hidden="true"></span>
+        </div>
+
+        <div class="panes">
+          <div class="pane is-active" role="tabpanel" id="pane-1" aria-labelledby="tab-1">
+            <div class="pane-media ph" data-ph="C4-10" data-ph-label="FOTO/VIDEO CONTROL4 · Iluminación: ambiente cálido con keypad">
+              <div class="chip"><span class="chip-label">Escena de iluminación</span><span class="chip-value">Noche cálida</span></div>
+            </div>
+            <div class="pane-body">
+              <p class="eyebrow">Iluminación</p>
+              <h3>Control inteligente de iluminación</h3>
+              <p>Diseño de iluminación Control4, keypads personalizados y programación de escenas para apartamentos, casas y fincas. Atenuación, horarios y control de toda la casa, ajustados a tu manera de vivir.</p>
+              <ul><li>Escenas inteligentes</li><li>Horarios y automatización</li><li>Control desde cualquier lugar</li></ul>
+              <a href="#contacto" class="link-arrow">Conoce la iluminación inteligente <i class="icon-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="pane" role="tabpanel" id="pane-2" aria-labelledby="tab-2" hidden>
+            <div class="pane-media ph" data-ph="C4-11" data-ph-label="FOTO/VIDEO CONTROL4 · Cortinas motorizadas al atardecer">
+              <div class="chip"><span class="chip-label">Horario de cortinas</span><span class="chip-value">Cerradas al atardecer</span></div>
+            </div>
+            <div class="pane-body">
+              <p class="eyebrow">Cortinas motorizadas</p>
+              <h3>Cortinas que siguen el sol</h3>
+              <p>Cortinas y persianas motorizadas que se ajustan a la luz del día, protegen tus muebles y abren o cierran según tu horario. Motores silenciosos, acabados limpios y telas elegidas con tu diseñador.</p>
+              <ul><li>Automatización según el sol</li><li>Motores silenciosos</li><li>Asesoría en telas y herrajes</li></ul>
+              <a href="#contacto" class="link-arrow">Conoce las cortinas motorizadas <i class="icon-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="pane" role="tabpanel" id="pane-3" aria-labelledby="tab-3" hidden>
+            <div class="pane-media ph" data-ph="C4-12" data-ph-label="FOTO/VIDEO CONTROL4 · Sala de cine en casa">
+              <div class="chip"><span class="chip-label">Reproduciendo</span><span class="chip-value">Noche de cine, todas las zonas</span></div>
+            </div>
+            <div class="pane-body">
+              <p class="eyebrow">Entretenimiento</p>
+              <h3>Cine en casa y audio en todos los espacios</h3>
+              <p>Salas de cine, salas de TV y audio multizona, calibrados en sitio e integrados a la arquitectura. Parlantes discretos, pantallas ocultas y un solo control que de verdad funciona.</p>
+              <ul><li>Diseño de cine en casa</li><li>Audio en toda la casa</li><li>Pantallas y parlantes ocultos</li></ul>
+              <a href="#contacto" class="link-arrow">Conoce el cine en casa <i class="icon-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="pane" role="tabpanel" id="pane-4" aria-labelledby="tab-4" hidden>
+            <div class="pane-media ph" data-ph="C4-13" data-ph-label="FOTO/VIDEO CONTROL4 · Termostato/clima en habitación principal">
+              <div class="chip"><span class="chip-label">Habitación principal</span><span class="chip-value">22 °C y estable</span></div>
+            </div>
+            <div class="pane-body">
+              <p class="eyebrow">Control de clima</p>
+              <h3>Confort en cada espacio</h3>
+              <p>Termostatos y sensores por zona que trabajan junto a tus cortinas e iluminación para mantener cada espacio a la temperatura correcta, sin gastar energía en cuartos vacíos.</p>
+              <ul><li>Control por zonas</li><li>Coordinación con cortinas e iluminación</li><li>Monitoreo remoto</li></ul>
+              <a href="#contacto" class="link-arrow">Conoce el control de clima <i class="icon-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="pane" role="tabpanel" id="pane-5" aria-labelledby="tab-5" hidden>
+            <div class="pane-media ph" data-ph="C4-14" data-ph-label="FOTO/VIDEO CONTROL4 · Puerta principal: cerradura y timbre con video">
+              <div class="chip"><span class="chip-label">Puerta principal</span><span class="chip-value">Cerrada, 9:42 p. m.</span></div>
+            </div>
+            <div class="pane-body">
+              <p class="eyebrow">Cámaras y cerraduras</p>
+              <h3>Seguridad que sí usas</h3>
+              <p>Cámaras, timbres con video y acceso sin llaves en una sola app, con la documentación que pida tu administración o conjunto. Equipos discretos que se integran a la arquitectura.</p>
+              <ul><li>Videovigilancia</li><li>Acceso sin llaves</li><li>Timbres con video</li></ul>
+              <a href="#contacto" class="link-arrow">Conoce cámaras y cerraduras <i class="icon-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="pane" role="tabpanel" id="pane-6" aria-labelledby="tab-6" hidden>
+            <div class="pane-media ph" data-ph="C4-15" data-ph-label="FOTO/VIDEO CONTROL4 · Rack de red / punto de acceso Wi-Fi">
+              <div class="chip"><span class="chip-label">Red</span><span class="chip-value">Cobertura total, cada espacio</span></div>
+            </div>
+            <div class="pane-body">
+              <p class="eyebrow">Redes y Wi-Fi</p>
+              <h3>La base de un hogar inteligente</h3>
+              <p>Redes diseñadas, cableadas y segmentadas, con Wi-Fi en cada espacio. Preparadas para mover iluminación, cortinas, audio, cámaras y videollamadas al mismo tiempo, sin interrupciones.</p>
+              <ul><li>Visita técnica y diseño</li><li>Cableado estructurado</li><li>Redes segmentadas</li></ul>
+              <a href="#contacto" class="link-arrow">Conoce redes y Wi-Fi <i class="icon-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Tu casa, conectada -->
+    <section class="connected">
+      <div class="container connected-grid">
+        <div class="connected-text">
+          <h3 class="connected-title" data-fade-only>Tu casa, conectada.</h3>
+          <p>One Automatización diseña e instala sistemas Control4 que integran iluminación, entretenimiento, red Wi-Fi, clima y seguridad.</p>
+        </div>
+        <div class="devices">
+          <div class="device" data-rise><i class="icon-refrigerator"></i><span>Electrodomésticos</span></div>
+          <div class="device" data-rise><i class="icon-cctv"></i><span>Cámaras</span></div>
+          <div class="device" data-rise><i class="icon-music"></i><span>Música</span></div>
+          <div class="device" data-rise><i class="icon-tv"></i><span>Televisores</span></div>
+          <div class="device" data-rise><i class="icon-fan"></i><span>Ventiladores</span></div>
+          <div class="device" data-rise><i class="icon-door-open"></i><span>Porteros</span></div>
+          <div class="device" data-rise><i class="icon-flame"></i><span>Chimeneas</span></div>
+          <div class="device" data-rise><i class="icon-warehouse"></i><span>Garajes</span></div>
+          <div class="device" data-rise><i class="icon-grid-3x3"></i><span>Keypads</span></div>
+          <div class="device" data-rise><i class="icon-lightbulb"></i><span>Luces</span></div>
+          <div class="device" data-rise><i class="icon-radar"></i><span>Sensores</span></div>
+          <div class="device" data-rise><i class="icon-blinds"></i><span>Cortinas</span></div>
+          <div class="device" data-rise><i class="icon-building-2"></i><span>Interruptores</span></div>
+          <div class="device" data-rise><i class="icon-thermometer"></i><span>Termostatos</span></div>
+          <div class="device" data-rise><i class="icon-fence"></i><span>Portones</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Control4 (equivalente a "Meet Josh") -->
+    <section class="c4" id="control4">
+      <div class="container c4-grid">
+        <div>
+          <p class="eyebrow">Control4</p>
+          <h3 class="c4-title" data-split="scroll">Conoce Control4: el sistema operativo de tu hogar inteligente</h3>
+          <p class="c4-sub" data-fade-only>Integrador autorizado Control4: lo diseñamos, instalamos y programamos en tu casa.</p>
+          <div class="c4-actions" data-fade-only>
+            <a href="#contacto" class="btn btn--dark">Descubre Control4</a>
+            <div class="c4-badge ph-inline" data-ph="BADGE-C4">[Sello oficial "Control4 Authorized Dealer"]</div>
+          </div>
+        </div>
+        <a href="#" class="video-card" aria-label="Ver video de Control4">
+          <div class="video-card-media ph ph--dark" data-ph="C4-30" data-ph-label="VIDEO CONTROL4 · Video oficial de la experiencia Control4"></div>
+          <span class="video-card-label"><span class="play-button"><i class="icon-play" aria-hidden="true"></i></span> Ver video</span>
+        </a>
+      </div>
+      <div class="container values">
+        <div class="value" data-fade-only><h3>Simplicidad</h3><p>Un toque para lo que haces todos los días.</p></div>
+        <div class="value" data-fade-only><h3>Privacidad</h3><p>Tu información y tu casa, bajo tu control.</p></div>
+        <div class="value" data-fade-only><h3>Intuición</h3><p>Fácil de usar para toda la familia.</p></div>
+        <div class="value" data-fade-only><h3>Armonía</h3><p>Todos tus sistemas trabajando juntos.</p></div>
+      </div>
+      <p class="container note">PLACEHOLDER: validar con el material oficial de Control4 los mensajes de privacidad y el nombre del sello de dealer.</p>
+    </section>
+
+    <!-- 8. Respaldo -->
+    <section class="trust">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">Integridad, seguridad y cumplimiento</p>
+        <h2 class="section-title trust-title" data-split="scroll">One Automatización te respalda con cobertura completa</h2>
+        <div class="trust-grid">
+          <div class="trust-item" data-fade-only><i class="icon-building-2" aria-hidden="true"></i><h3>Protección de tu propiedad</h3><p>[CONFIRMAR] Seguro ante cualquier daño durante la instalación.</p></div>
+          <div class="trust-item" data-fade-only><i class="icon-hard-hat" aria-hidden="true"></i><h3>Personal asegurado</h3><p>[CONFIRMAR] Todos los técnicos cuentan con seguro de riesgos laborales y responsabilidad civil.</p></div>
+          <div class="trust-item" data-fade-only><i class="icon-shield-check" aria-hidden="true"></i><h3>Cumplimiento en obra</h3><p>[CONFIRMAR] Cumplimos los requisitos de conjuntos, edificios y obras, y entregamos la documentación que se solicite.</p></div>
+        </div>
+        <p class="note">PLACEHOLDER: One debe confirmar que tiene estas coberturas antes de publicar; si no, cambiar o quitar el bloque.</p>
+      </div>
+    </section>
+
+    <!-- 9. CTA final -->
+    <section class="cta" id="contacto">
+      <div class="cta-media ph ph--dark" data-ph="C4-40" data-ph-label="VIDEO CONTROL4 · Fondo en blanco y negro: interior/fachada (loop)"></div>
+      <div class="cta-content container">
+        <p class="pill-label">Instalación de hogares inteligentes</p>
+        <h2 class="cta-title" data-split="scroll">Descubre todo lo que puede hacer una casa más inteligente y conectada.</h2>
+        <a href="#form" class="btn btn--glass">Agenda una llamada</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <form class="footer-form" id="form" action="#" onsubmit="return false">
+        <h4>Suscríbete a nuestro boletín</h4>
+        <div class="footer-form-row">
+          <input type="email" name="email" placeholder="Tu correo" autocomplete="email" required aria-label="Correo">
+          <button type="submit" class="btn btn--accent">Suscribirme</button>
+        </div>
+        <p class="footer-legal">Nunca compartimos tu información con terceros.</p>
+        <p class="note note--light">PLACEHOLDER: conectar el formulario (correo, CRM o WhatsApp) antes de publicar.</p>
+      </form>
+    </div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">ONE<span>automatización</span></a>
+        <p>Integrador autorizado Control4.</p>
+      </div>
+      <div><h4>Soluciones</h4><a href="#soluciones">Hogar inteligente</a><a href="#soluciones">Iluminación</a><a href="#soluciones">Cortinas</a><a href="#soluciones">Entretenimiento</a><a href="#soluciones">Clima</a><a href="#soluciones">Cámaras y cerraduras</a><a href="#soluciones">Redes y Wi-Fi</a></div>
+      <div><h4>Empresa</h4><a href="#nosotros">Servicios</a><a href="#nosotros">Nuestra historia</a><a href="#">Precios</a><a href="#">Aliados</a></div>
+      <div><h4>Contacto</h4><a href="#contacto">Contacto</a><a href="#contacto">Solicitud de servicio</a><a href="#">Política de privacidad</a><p class="footer-contact">[PLACEHOLDER: teléfono / WhatsApp]<br>[PLACEHOLDER: correo]<br>[PLACEHOLDER: dirección]</p></div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> One Automatización. Todos los derechos reservados. Control4 es una marca registrada de su propietario.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
